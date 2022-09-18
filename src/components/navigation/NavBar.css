@@ -1,0 +1,86 @@
+.container {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.wrapper {
+    width: 95%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*LOGO*/
+
+.logos-container, .content-container {
+    width: 100%;
+    height: 100%;
+}
+
+.logos-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.bmw-group {
+    height: 90%;
+    width: 120px;
+}
+
+.group-brands {
+    display: flex;
+
+    align-items: center;
+}
+
+.mini, .rolls {
+    margin-left: 0.5rem;
+}
+
+.bmw {
+    height: 35px;
+    width: 35px;
+}
+
+.mini {
+    height: 45px;
+    width: 50px;
+}
+
+.rolls {
+    height: 30px;
+    width: 110px;
+}
+
+/*MENU*/
+
+.content-container, .content-wrapper, .info, .lang, .menu {
+    display: flex;
+}
+
+.content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    width: 50%;
+    justify-content: space-between;
+}
+
+.lang, .menu {
+    width: 25%;
+    justify-content: space-around;
+}
