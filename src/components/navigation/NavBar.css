@@ -84,3 +84,7 @@
     width: 25%;
     justify-content: space-around;
 }
+
+.info, .lang, .menu {
+    cursor: pointer;
+}

@@ -2,8 +2,15 @@ import React from 'react';
 import './NavBar.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faBars} from '@fortawesome/free-solid-svg-icons';
+import {useTranslation} from 'react-i18next';
 
 const NavBar = () => {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    }
+
     return (
         <div className="container">
             <div className="wrapper">
@@ -22,19 +29,23 @@ const NavBar = () => {
                 <div className="content-container">
                     <div className="content-wrapper">
                         <div className="info">
-                            <div>Mein Konto</div>
-                            <div>Warenkorb</div>
-                            <div>Logout</div>
+                            <div>{t('myAccount')}</div>
+                            <div>{t('shoppingCart')}</div>
+                            <div>{t('logout')}</div>
                         </div>
                         <div className="lang">
-                            <div>DE</div>
-                            <div>EN</div>
+                            <div onClick={() => changeLanguage("de")}>
+                                {t('de')}
+                            </div>
+                            <div onClick={() => changeLanguage("en")}>
+                                {t('en')}
+                            </div>
                         </div>
                         <div className="menu">
                             <div>
                                 <FontAwesomeIcon icon={faSearch} size="1x"/>
                             </div>
-                            <div>MENU</div>
+                            <div>{t('menu')}</div>
                             <div>
                                 <FontAwesomeIcon icon={faBars} size="1x" />
                             </div>
