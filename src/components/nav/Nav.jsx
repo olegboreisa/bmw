@@ -1,10 +1,12 @@
 import React from 'react';
-import './NavBar.css'
+import style from './Nav.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faBars} from '@fortawesome/free-solid-svg-icons';
 import {useTranslation} from 'react-i18next';
 
-const NavBar = () => {
+const Nav = () => {
+    console.log("RERENDER")
+
     const { t, i18n } = useTranslation();
 
     const changeLanguage = (lang) => {
@@ -12,7 +14,7 @@ const NavBar = () => {
     }
 
     return (
-        <div className="container">
+        <div className={style.container}>
             <div className="wrapper">
                 <div className="logos-container">
                     <div className="logos-wrapper">
@@ -57,4 +59,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Nav;

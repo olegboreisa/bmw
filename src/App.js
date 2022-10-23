@@ -1,9 +1,13 @@
-import NavBar from './components/navigation/NavBar';
+import Nav from './components/nav/Nav';
 import '../src/App.css'
+import Main from "./components/main/Main";
 
 function App() {
   return (
-      <NavBar />
+      <>
+        <Nav />
+        <Main />
+      </>
   );
 }
 
